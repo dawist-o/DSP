@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="875.0" prefWidth="1280.0" style="-fx-background-color: #C8DFEA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dawisto.controllers.UIController">
+   <children>
+      <LineChart fx:id="signalChart" axisSortingPolicy="NONE" layoutX="20.0" layoutY="58.0" legendSide="TOP" prefHeight="270.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefWidth="28.0" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <ChoiceBox fx:id="smoothingType" layoutX="52.0" layoutY="14.0" prefWidth="150.0" />
+      <Button fx:id="drawButton" layoutX="214.0" layoutY="14.0" mnemonicParsing="false" onAction="#onDrawButtonClick" text="Draw" />
+      <BarChart fx:id="amplitudeSpectre" layoutX="20.0" layoutY="316.0" legendSide="TOP" prefHeight="270.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="phaseSpectre" layoutX="20.0" layoutY="578.0" legendSide="TOP" prefHeight="270.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>
